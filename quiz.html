@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Tech Treasure Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Question <span id="question-number">1</span></h2>
+        <p id="question-text">Loading question...</p>
+        
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Submit</button>
+
+        <p>Lives: <span id="lives">3</span> ❤️</p>
+
+        <button onclick="showHint()">🔍 Show Hint (Scan QR)</button>
+        <img id="qr-code" src="" style="display:none;" alt="QR Hint">
+
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
