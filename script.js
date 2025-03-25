@@ -39,10 +39,15 @@ function loadQuestion() {
     document.getElementById("qr-code").src = questions[currentQuestion].qr;
 }
 
+function normalizeText(text) {
+    return text.trim().toLowerCase().replace(/\s+/g, " ");
+}
+
 function checkAnswer() {
-    let userAnswer = document.getElementById("answer").value.trim();
+    let userAnswer = normalizeText(document.getElementById("answer").value);
+    let correctAnswer = normalizeText(questions[currentQuestion].answer);
     
-    if (userAnswer.toLowerCase() === questions[currentQuestion].answer.toLowerCase()) {
+    if (userAnswer === correctAnswer) {
         alert("✅ Correct! Moving to the next question.");
         currentQuestion++;
         loadQuestion();

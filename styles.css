@@ -4,6 +4,8 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background: url('1.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .container {
@@ -18,17 +20,23 @@ body {
 button {
     background: #007BFF;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px cyan; /* Default glow */
 }
 
 button:hover {
     background: #0056b3;
+    box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 45px cyan; /* Enhanced glow on hover */
 }
 
 img {
     margin-top: 10px;
     width: 100px;
 }
+
+
